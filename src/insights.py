@@ -54,16 +54,16 @@ def matches_salary_range(job, salary):
     if type(job['max_salary']) != int or type(job['min_salary']) != int:
         raise ValueError
 
+    if job['min_salary'] > job['max_salary']:
+        raise ValueError
 
-def matches_salary_range(job, salary):
-    """Checks if a given salary is in the salary range of a given job
+    if type(salary) != int:
+        raise ValueError
 
-    Parameters
-    ----------
-    job : dict
-        The job with `min_salary` and `max_salary` keys
-    salary : int
-        The salary to check if matches with salary range of the job
+    if job['min_salary'] <= salary <= job['max_salary']:
+        return True
+    else:
+        return False
 
     Returns
     -------

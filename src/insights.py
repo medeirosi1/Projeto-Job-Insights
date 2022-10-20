@@ -47,17 +47,12 @@ def get_min_salary(path):
 
     Must call `read`
 
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
+def matches_salary_range(job, salary):
+    if job.get('min_salary') is None or job.get('max_salary') is None:
+        raise ValueError
 
-    Returns
-    -------
-    int
-        The minimum salary paid out of all job opportunities
-    """
-    pass
+    if type(job['max_salary']) != int or type(job['min_salary']) != int:
+        raise ValueError
 
 
 def matches_salary_range(job, salary):

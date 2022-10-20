@@ -45,7 +45,6 @@ def get_min_salary(path):
     print(min(minSalary))
     return min(minSalary)
 
-    Must call `read`
 
 def matches_salary_range(job, salary):
     if job.get('min_salary') is None or job.get('max_salary') is None:
@@ -64,21 +63,8 @@ def matches_salary_range(job, salary):
         return True
     else:
         return False
+        
 
-    Returns
-    -------
-    bool
-        True if the salary is in the salary range of the job, False otherwise
-
-    Raises
-    ------
-    ValueError
-        If `job["min_salary"]` or `job["max_salary"]` doesn't exists
-        If `job["min_salary"]` or `job["max_salary"]` aren't valid integers
-        If `job["min_salary"]` is greather than `job["max_salary"]`
-        If `salary` isn't a valid integer
-    """
-    pass
 
 
 def filter_by_salary_range(jobs, salary):

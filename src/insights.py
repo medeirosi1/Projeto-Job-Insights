@@ -39,7 +39,11 @@ def get_max_salary(path):
 # get_max_salary('src/jobs.csv')
 
 def get_min_salary(path):
-    """Get the minimum salary of all jobs
+    readJobs = read(path)
+    minSalary = [int(read['min_salary']) for read in readJobs if read['min_salary'].isdigit()]
+    print(minSalary)
+    print(min(minSalary))
+    return min(minSalary)
 
     Must call `read`
 
